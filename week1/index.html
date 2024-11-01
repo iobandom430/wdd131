@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131: Dynamic Web Fundamentals - Ian Kevin Obando Monge</title>
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Ian Kevin Obando Monge</span></h1>
+        <nav>
+            <a href="#">LinkedIn</a>
+            <a href="#">I-Learn</a>
+            <a href="#">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <main>
+            <section class="about-me">
+                <h2>About Me</h2>
+                <p>My name is Ian Kevin Obando Monge and I go by Ian. I was born in Costa Rica and live with my family in Costa Rica. I am currently working as a legal attorney at my own law firm. My pets are my world, and I love spending time with them. I love to travel and learn new things.</p>
+                <img src="images copia/profile.jpg" alt="Photo of Ian" class="profile-image">
+
+                <h3>San Jose, Costa Rica</h3>
+                <div class="location">
+                    <img src="images copia/Unknown.jpeg" alt="Official Shield of Costa Rica" class="flag">
+                    <p class="caption"><em>Official Shield of Costa Rica</em></p>
+                    <p>Costa Rica is a lush, biodiverse paradise known for its “pura vida” lifestyle, embodying peace, happiness, and environmental harmony. Nestled in Central America, it boasts pristine beaches, misty cloud forests, and active volcanoes. With no standing army, the country prioritizes education, healthcare, and conservation. Costa Rica is a model for eco-tourism and sustainability, captivating travelers worldwide.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar with Web Dev Resources -->
+        <aside class="location-info">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="#">Dev.to Community</a></li>
+                <li><a href="#">Smashing Magazine</a></li>
+                <li><a href="#">CSS Tricks</a></li>
+                <li><a href="#">W3 Schools</a></li>
+                <li><a href="#">Udemy</a></li>
+                <li><a href="#">Lorem Picsum Image Placeholder</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Ian Kevin Obando Monge</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+    <!-- JavaScript to set Last Modification Date -->
+    <script>
+        // JavaScript to dynamically set the last modified date in the footer
+        const lastModified = new Date(document.lastModified);
+        const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        document.getElementById('last-modified').textContent = lastModified.toLocaleDateString('en-GB', options) + ' ' + lastModified.toLocaleTimeString('en-GB', options);
+    </script>
+</body>
+
+</html>
