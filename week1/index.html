@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131: Dynamic Web Fundamentals - Ian Kevin Obando Monge</title>
     <link rel="stylesheet" href="styles/base.css">
+    <meta name="description" content="WDD 131: Dynamic Web Fundamentals - Ian Kevin Obando Monge, exploring web development with a focus on HTML, CSS, and JavaScript fundamentals.">
+
 </head>
 
 <body>
@@ -51,19 +53,26 @@
         </aside>
     </div>
 
-    <!-- Footer Section -->
+
+
+    <div>
+        <label for="number1">Number 1</label>
+        <input type="number" id="number1">
+        <p>+</p>
+        <label for="number2">Number 2</label>
+        <input type="number" id="number2">
+    
+        <button id="doTheCalculation">=</button>
+    
+        <p id="result"></p>
+    </div>
+
+   
     <footer>
         <p>&copy; 2024 Ian Kevin Obando Monge</p>
         <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
-
-    <!-- JavaScript to set Last Modification Date -->
-    <script>
-        // JavaScript to dynamically set the last modified date in the footer
-        const lastModified = new Date(document.lastModified);
-        const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-        document.getElementById('last-modified').textContent = lastModified.toLocaleDateString('en-GB', options) + ' ' + lastModified.toLocaleTimeString('en-GB', options);
-    </script>
+<script src="scripts/getdates.js"></script>
 </body>
 
 </html>
