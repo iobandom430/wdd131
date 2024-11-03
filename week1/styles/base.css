@@ -37,9 +37,15 @@ header nav a {
     margin: 0 10px;
 }
 
+header nav a:hover {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
 /* Main Layout */
 .container {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
@@ -118,6 +124,7 @@ aside.location-info {
 
 .location-info ul li {
     margin: 10px 0;
+    overflow-wrap: break-word;
 }
 
 .location-info ul li a {
@@ -139,5 +146,13 @@ footer {
 }
 
 footer p {
-    margin: 5px;
+    font-size: 0.85em;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+
+/* Preformatted Text */
+pre {
+    max-width: 100%;
+    white-space: pre-wrap;
 }
