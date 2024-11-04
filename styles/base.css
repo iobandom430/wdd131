@@ -77,18 +77,11 @@ aside.location-info {
     text-align: center;
 }
 
-.about-me h3 {
-    text-align: center;
-    text-decoration: underline;
-    
-}
-
 .about-me .profile-image {
     max-width: 100%;
     border-radius: 8px;
     margin-top: 10px;
 }
-
 
 /* Location Section */
 .location h3 {
@@ -163,4 +156,3 @@ pre {
     max-width: 100%;
     white-space: pre-wrap;
 }
-
