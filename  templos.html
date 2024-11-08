@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temples</title>
+    
+    
+    <!-- Enlace CSS para desarrollo móvil primero -->
+   
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="stylesheet" href="styles/temples.css">
+    
+    <!-- Script diferido para el archivo JavaScript -->
+    
+</head>
+
+<body>
+
+    <!-- Encabezado principal con navegación -->
+    <header>
+        <h1>Temples</h1>
+        <!-- Botón de menú hamburguesa -->
+        <button class="menu-icon" onclick="toggleMenu()">☰</button>
+    <nav class="nav-menu">
+        <script src="scripts/temples.js" defer></script>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#old">old</a></li>
+                <li><a href="#new">new</a></li>
+                <li><a href="#big">big</a></li>
+                <li><a href="#small">small</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- Contenido principal -->
+    <main>
+        <h2>Selección Actual: Hogar</h2>
+
+        <!-- Galería de templos con imágenes y leyendas -->
+        <section>
+            <figure>
+                <img src="images/argentina.webp" alt="Templo 1">
+                <figcaption>Templo 1</figcaption>
+            </figure>
+            <figure>
+                <img src="images/arizona.webp" alt="Templo 2">
+                <figcaption>Templo 2</figcaption>
+            </figure>
+            <figure>
+                <img src="images/ghana.jpg" alt="Templo 3">
+                <figcaption>Templo 3</figcaption>
+            </figure>
+            <figure>
+                <img src="images/nigeria_temple .jpg" alt="Templo 4">
+                <figcaption>Templo 4</figcaption>
+            </figure>
+            <figure>
+                <img src="images/argentina.webp" alt="Templo 5">
+                <figcaption>Templo 5</figcaption>
+            </figure>
+            <figure>
+                <img src="images/arizona.webp" alt="Templo 6">
+                <figcaption>Templo 6</figcaption>
+            </figure>
+            <figure>
+                <img src="images/ghana.jpg" alt="Templo 7">
+                <figcaption>Templo 7</figcaption>
+            </figure>
+            <figure>
+                <img src="images/nigeria_temple .jpg" alt="Templo 8">
+                <figcaption>Templo 8</figcaption>
+            </figure>
+            <figure>
+                <img src="images/ghana.jpg" alt="Templo 9">
+                <figcaption>Templo 9</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <!-- Pie de página con información -->
+    <footer>
+        <p>&copy; 2024 Ian Kevin Obando Monge</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+    <script src="scripts/getdates.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+/* Estilos para el contenedor principal */
+main {
+    padding: 20px;
+}
+
+/* Estilos para el título de la selección */
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos de la galería */
+section {
+    display: grid;
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+/* Estilos de cada figura en la galería */
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    max-width: 300px; /* Tamaño máximo opcional */
+}
+
+/* Diseño de la cuadrícula en pantallas grandes */
+@media (min-width: 1024px) {
+    section {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+}
+
+/* Diseño de la cuadrícula en pantallas medianas */
+@media (min-width: 768px) and (max-width: 1023px) {
+    section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+/* Diseño de la cuadrícula en pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    section {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+}
+/* Footer Styling */
+footer {
+    background-color: #2A547E;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px;
+}
