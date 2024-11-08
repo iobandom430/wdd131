@@ -1,0 +1,60 @@
+/* Estilos básicos del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #4A148C;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Estilos del botón hamburguesa */
+.menu-icon {
+    font-size: 24px;
+    display: none; /* Oculto en pantallas grandes */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos del menú de navegación */
+.nav-menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Muestra el botón hamburguesa en pantallas pequeñas */
+    }
+
+    .nav-menu ul {
+        display: none; /* Oculta el menú en pantallas pequeñas */
+        flex-direction: column; /* Disposición vertical de los elementos del menú */
+        background-color: #4A148C;
+        padding: 10px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+
+    /* Clase para mostrar el menú desplegable en pantallas pequeñas */
+    .nav-menu.open ul {
+        display: flex;
+    }
+}
