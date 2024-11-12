@@ -35,38 +35,76 @@
     margin-bottom: 20px;
   }
   
-  /* Hero Image */
+  /* Overlay Container */
+  .overlay-container {
+    position: relative;
+  }
+  
   .hero {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
   }
   
   .hero img {
     width: 100%;
     border-radius: 8px;
+  }
+  
+  /* Data and Weather Sections */
+  .data-section{
+
+    position: absolute;
+    top: 220px;
+    width: 45%;
+    padding: 15px;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+  .weather-section {
+
+        position: absolute;
+        top: 420px;
+        width: 45%;
+        padding: 15px;
+        align-items: center;
+        border-radius: 8px;
+        color: white;
+        background: rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     
   }
   
-  /* Content Layout (Flexbox) */
-  .content {
-    display: flex;
-    justify-content: space-between;  /* Esto coloca los datos y el clima en los extremos */
-    gap: 20px;
+  /* Posiciones en Pantallas Grandes */
+  .data-section {
+    left: 20px; /* Se posiciona a la izquierda */
+    border-top: 10px;
+  
   }
   
-  .data-section, .weather-section {
-    flex: 1;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  .weather-section {
+    right: 20px; /* Se posiciona a la derecha */
   }
   
-  /* Weather Icon */
-  .weather-section h2 .weather-icon {
-    font-size: 1.2em;
-    margin-left: 8px;
+  /* Estilos de Texto */
+  .data-section h2,
+  .weather-section h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    margin-bottom: 8px;
   }
   
   /* Footer */
@@ -80,16 +118,12 @@
   
   /* Responsive Design */
   @media (max-width: 767px) {
-    .content {
-      flex-direction: column;  /* Cambia a columna en pantallas pequeñas */
-    }
-    
-    .hero {
-      margin-bottom: 15px;
-    }
-    
-    .data-section, .weather-section {
-      width: 100%;  /* Asegura que las secciones ocupen el 100% del ancho en pantallas pequeñas */
+    /* Cambiar a posición fija debajo de la imagen */
+    .data-section,
+    .weather-section {
+      position: static; /* Desactiva la posición absoluta */
+      width: 100%; /* Ocupan el ancho completo */
+      margin-top: 10px;
     }
   }
   
