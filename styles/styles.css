@@ -48,13 +48,14 @@
   .hero img {
     width: 100%;
     border-radius: 8px;
+    height: auto;
   }
   
   /* Data and Weather Sections */
   .data-section{
 
     position: absolute;
-    top: 220px;
+    top: 120px;
     width: 45%;
     padding: 15px;
     align-items: center;
@@ -66,11 +67,10 @@
 }
 
 
-
   .weather-section {
 
         position: absolute;
-        top: 420px;
+        top: 220px;
         width: 45%;
         padding: 15px;
         align-items: center;
@@ -117,13 +117,15 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     /* Cambiar a posición fija debajo de la imagen */
     .data-section,
     .weather-section {
       position: static; /* Desactiva la posición absoluta */
-      width: 100%; /* Ocupan el ancho completo */
+      width: auto; /* Ocupan el ancho completo */
       margin-top: 10px;
     }
+
+    
   }
   
