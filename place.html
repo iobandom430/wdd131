@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madagascar Information</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <meta author="Ian Kevin Obando Monge">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Title Section -->
+    <header class="title">
+      <h1>Madagascar</h1>
+    </header>
+
+    <div class="hero">
+        <picture>
+          <source srcset="images/arizona.webp" media="(min-width: 1000px)">
+          <source srcset="images/argentina.webp" media="(min-width: 500px)">
+          <img src="images/arizona.webp" alt="Temple name and location" width="1000" height="500">
+        </picture>
+      </div>
+    
+      
+      <!-- Data Section -->
+      <section class="data-section">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Area:</strong> 587,041 sq km</li>
+          <li><strong>Population:</strong> 27,691,018</li>
+          <li><strong>Capital:</strong> Antananarivo</li>
+          <li><strong>Languages:</strong> Malagasy, French</li>
+          <li><strong>Currency:</strong> Malagasy Ariary</li>
+        </ul>
+      </section>
+
+      <!-- Weather Section -->
+      <section class="weather-section">
+        <h2>Weather <span class="weather-icon">⛅</span></h2>
+        <ul>
+          <li><strong>Temperature:</strong> 10°C</li>
+          <li><strong>Conditions:</strong> Partly Cloudy</li>
+          <li><strong>Wind:</strong> 5 km/h</li>
+          <li><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></li>
+        </ul>
+      </section>
+      
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>©<span id="current-year"></span> Ian Kevin Obando Monge</p>
+      <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+    
+  </div>
+
+  <script src="scripts/script.js" defer></script>
+</body>
+</html>
