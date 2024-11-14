@@ -1,0 +1,10 @@
+@media only screen and (min-width: 500px) {
+    h1 {
+        color: red;
+    }
+}
+
+/* Media Query for screens 700px and wider */
+@media only screen and (min-width: 700px) {
+    #random {
+        flex-direction: row;}}
