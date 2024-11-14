@@ -46,9 +46,10 @@
   }
   
   .hero img {
-    width: 100%;
+    width: auto;
     border-radius: 8px;
-    height: auto;
+    height: 100vw;
+
   }
   
   /* Data and Weather Sections */
