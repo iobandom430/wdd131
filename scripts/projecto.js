@@ -164,3 +164,87 @@ const temples = [
               dropdown.style.display = 'none';
           }
       })
+
+      const vehicleData = [
+  {
+    title: "Toyota Highlander 2019",
+    type: "SUV",
+    price: 219,
+    location: "Clovis",
+    distance: 13.6,
+    rating: 4.97,
+    trips: 31,
+    dates: { start: "2024-12-01", end: "2024-12-04" },
+    image: "https://images.turo.com/media/vehicle/images/CNC1eUEGQImWLz2B_SfMAw.445x238.jpg"
+  },
+  {
+    title: "Honda Civic 2021",
+    type: "Sedan",
+    price: 89,
+    location: "Fresno",
+    distance: 10.2,
+    rating: 4.89,
+    trips: 20,
+    dates: { start: "2024-12-01", end: "2024-12-03" },
+    image: "https://images.turo.com/media/vehicle/images/CNC1eUEGQImWLz2B_SfMAw.445x238.jpg"
+  },
+  // Add more vehicles here
+];
+
+function populateVehicles(vehicles) {
+  const container = document.getElementById("vehicle-container");
+  container.innerHTML = ""; // Clear existing vehicles
+
+  vehicles.forEach((vehicle) => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+      <img src="${vehicle.image}" alt="${vehicle.title}">
+      <div class="card-body">
+        <h3 class="card-title">${vehicle.title}</h3>
+        <p class="card-text">
+          <span class="rating">Rating: ${vehicle.rating}</span> (${vehicle.trips} trips)
+        </p>
+        <p class="card-price">$${vehicle.price} total</p>
+        <p class="card-location">Location: ${vehicle.location}</p>
+        <p class="card-dates">Available: ${vehicle.dates.start} to ${vehicle.dates.end}</p>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+function filterVehicles() {
+  const type = document.getElementById("car-type").value;
+  const priceRange = document.getElementById("price-range").value;
+  const location = document.getElementById("location").value.toLowerCase();
+  const startDate = document.getElementById("start-date").value;
+  const endDate = document.getElementById("end-date").value;
+
+  const filtered = vehicleData.filter((vehicle) => {
+    const matchesType = type === "all" || vehicle.type === type;
+    const [minPrice, maxPrice] = priceRange === "all" ? [0, Infinity] : priceRange.split("-").map(Number);
+    const matchesPrice = vehicle.price >= minPrice && vehicle.price <= maxPrice;
+    const matchesLocation = vehicle.location.toLowerCase().includes(location);
+    const matchesDates =
+      (!startDate || new Date(startDate) <= new Date(vehicle.dates.end)) &&
+      (!endDate || new Date(endDate) >= new Date(vehicle.dates.start));
+
+    return matchesType && matchesPrice && matchesLocation && matchesDates;
+  });
+
+  populateVehicles(filtered);
+}
+
+document.getElementById("car-type").addEventListener("change", filterVehicles);
+document.getElementById("price-range").addEventListener("change", filterVehicles);
+document.getElementById("location").addEventListener("input", filterVehicles);
+document.getElementById("start-date").addEventListener("change", filterVehicles);
+document.getElementById("end-date").addEventListener("change", filterVehicles);
+
+populateVehicles(vehicleData); // Initial population
+
+// 
+
