@@ -4,57 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RideMe-Rental </title>
+    <title>RideMe-Rental</title>
     <link rel="stylesheet" href="styles/projecto.css">
     <script src="scripts/projecto.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    
 </head>
-
 
 <body>
     <header>
         <svg xmlns="http://www.w3.org/2000/svg" width="350" height="50" viewBox="0 0 250 50" fill="none" role="img" version="1.1">
-            <!-- Text with the "Permanent Marker" font -->
             <a href="projecto.html" target="_self">
-            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="44" fill="#000000">
-                RideMe!
-            </text>
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="44" fill="#000000">
+                    RideMe!
+                </text>
+            </a>
         </svg>
-        
       
         <nav>
             <ul>
                 <li><a href="projecto_about.html">Explore Cars</a></li>
-                <li><a href="#cars">Cars</a></li>
+                <li><a href="search-results.html">Cars</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="login">Login</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main>
         <section id="hero">
             <div class="titulo1">
                 <h2>Find Your Perfect Car</h2>
-                <form id="search-form">
+                <form id="search-form" action="search-results.html" method="get">
                     <!-- Airport Input -->
-                    <input list="airports" id="airportSearch" placeholder="Enter Airport" required>
+                    <input list="airports" id="airportSearch" name="airport" placeholder="Enter Airport" required>
                     <datalist id="airports"></datalist>
     
                     <!-- Date Inputs -->
-                    <input type="date" id="pickup-date" required>
-                    <input type="date" id="dropoff-date" required>
+                    <input type="date" id="pickup-date" name="pickup-date" required>
+                    <input type="date" id="dropoff-date" name="dropoff-date" required>
     
                     <!-- Search Button -->
-                    <button type="button" id="search-button">Find Cars</button>
+                    <button type="submit" id="search-button">Find Cars</button>
                 </form>
-
             </div>
         </section>
-
-       
     </main>
 
     <footer>
