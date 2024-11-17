@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Verificar que los parámetros existan en la URL
     if (!airport || !pickupDate || !dropoffDate) {
         alert("Faltan parámetros de búsqueda. Por favor, vuelve a la página principal.");
-        window.location.href = "index.html"; // Redirigir al inicio si faltan parámetros
+        window.location.href = "login.html"; // Redirigir al inicio si faltan parámetros
         return;
     }
 

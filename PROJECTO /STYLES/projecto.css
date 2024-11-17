@@ -192,3 +192,124 @@ text {
 .car-card button:hover {
     background-color: #555;
 }
+
+/* Login Css*/
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-title {
+    font-size: 2rem;
+    color: #18191c;
+    margin-bottom: 1rem;
+}
+
+.login-description {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #0d6efd;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+.social-login {
+    margin-top: 1rem;
+}
+
+.social-login p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.social-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.social-btn:hover {
+    border-color: #0d6efd;
+    background-color: #f0f8ff;
+}
+
+.apple-btn {
+    color: #333;
+}
+
+.google-btn {
+    color: #db4437;
+}
+
+.signup-link {
+    margin-top: 1rem;
+    color: #666;
+}
+
+.signup-link a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}

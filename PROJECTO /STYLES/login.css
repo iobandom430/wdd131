@@ -1,0 +1,40 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f4f4;
+    color: #333;
+}
+
+header {
+    background: #dfe1e4;
+    color: rgb(243, 238, 238);
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+}
+
+
+
+text {
+    font-family: 'Permanent Marker', sans-serif;
+}
