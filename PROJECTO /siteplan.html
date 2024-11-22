@@ -32,7 +32,37 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            
         }
+        element.style {
+    background-color: #3e3e3e;
+}
+.color-squared {
+    display: inline-block;
+    width: 100px;
+    margin-right: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
+    text-align: center;
+    padding: 50px 0;
+}
+
+element.style {
+}
+.color-palette {
+    display: flex
+;
+    justify-content: center;
+    margin: 20px 0;
+}
+user agent stylesheet
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -73,9 +103,14 @@
     <section id="color-schema">
         <h2>Color Schema</h2>
         <p>The selected colors for this website are:</p>
-        <ul>
-            <li><strong>#ffffff:</strong>: This deep blue will be used for headings and the header/footer background.</li>
-            <li><strong>#333333</strong>: This light blue will be used as the page background color.</li>
+       
+            <div class="color-palette">
+                <div class="color-squared" style="background-color:  #f5f4f4;;">#f5f4f4;</div>
+                <div class="color-squared" style="background-color:#dfe1e4;; color: rgb(57, 56, 56)">#dfe1e4;</div>
+                <div class="color-squared" style="background-color: #333;;; color: rgb(240, 238, 238)">#333;</div>
+            </div>
+            <p></p>
+           
         </ul>
     </section>
 
@@ -83,8 +118,8 @@
         <h2>Typography</h2>
         <p>The selected fonts for this website are:</p>
         <ul>
-            <li><strong>Arial, sans-serif:</strong> This font will be used for body text and paragraphs.</li>
-            <li><strong>Georgia, serif:</strong> This font will be used for headings and titles.</li>
+            <li><strong>Arial, sans-serif;</strong> This font will be used for body content </li>
+            <li><strong>'Permanent Marker', sans-serif;</strong> This font will be used for headings and titles.</li>
         </ul>
     </section>
 
