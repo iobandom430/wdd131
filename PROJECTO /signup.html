@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideMe-Rental</title>
+    <link rel="stylesheet" href="STYLES/signup.css">
+    <script src="scripts/projecto.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="scripts/login.js" defer></script>
+</head>
+<body>
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" width="350" height="50" viewBox="0 0 250 50" fill="none" role="img" version="1.1">
+            <a href="projecto.html" target="_self">
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="44" fill="#000000">
+                    RideMe!
+                </text>
+            </a>
+        </svg>
+        <nav>
+            <ul>
+                <li><a href="projecto_about.html">Explore Cars</a></li>
+    
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Create Your Account</h1>
+        <form action="/PROJECTO/signup-success.html" method="POST">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="redirect">
+            Already have an account? <a href="/PROJECTO/login.html">Log in here</a>
+        </div>
+    </div>
+</body>
+</html>
