@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles/projecto.css">
     <script src="scripts/projecto.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <meta name="search-results" content=" Results">
+    <meta name="author" content="IAN OBANDO">
 </head>
 
 <body>
@@ -23,7 +25,7 @@
         <nav>
             <ul>
                 <li><a href="projecto_about.html">Explore Cars</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="contact.html">Join us</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
@@ -32,7 +34,8 @@
     <main>
         <section id="hero">
             <div class="titulo1">
-                <h2>Find Your Perfect Car</h2>
+                <h2><p id="changing-text"></p></h2>
+               
                 <form id="search-form" action="search-results.html" method="get">
                     <!-- Airport Input -->
                     <input list="airports" id="airportSearch" name="airport" placeholder="Enter Airport" required>

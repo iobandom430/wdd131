@@ -1,0 +1,202 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2 { text-align: center;}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f4f4;
+    color: #333;
+}
+
+header {
+    background: #dfe1e4;
+    color: rgb(243, 238, 238);
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+}
+
+
+
+text {
+    font-family: 'Permanent Marker', sans-serif;
+    
+}
+
+
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.car-card {
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+}
+
+.car-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.car-card h4 {
+    margin: 10px 0;
+    color: #007bff;
+}
+
+.car-card p {
+    color: #555;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.rent-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.rent-button:hover {
+    background-color: #0056b3;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #dfe1e4;
+    color: rgb(17, 16, 16);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Contenedor de Autos */
+#car-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Estilo de las tarjetas de autos */
+.car-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-card h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.car-card p {
+    text-align: center;
+    padding: 0 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.car-card button {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.car-card button:hover {
+    background-color: #555;
+}
+
+
+
+/* Animación de resplandor */
+@keyframes flame_plp_rising_2 {
+    0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.9);
+    }
+}
+
+/* Clase para resaltar el precio más bajo */
+.lowest-price {
+    position: relative;
+    z-index: 5; /* Asegura que está sobre otros elementos */
+    animation: flame_plp_rising_2 1.5s ease-in-out infinite; /* Animación fluida infinita */
+    border: 2px solid #ffd700; /* Borde dorado para resaltar */
+    border-radius: 8px;
+    background-color: #fffbea; /* Fondo claro para destacar */
+    padding: 10px;
+}
+
+/* Agregar icono o marca especial */
+.lowest-price::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 12px); /* Centrar el icono */
+    width: 24px;
+    height: 68px;
+    background-image: url('data:image/png;base64,...'); /* Aquí usas el ícono de la llama */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: flame_plp_rising_2 1.5s linear infinite;
+    z-index: 6;
+}

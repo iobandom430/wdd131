@@ -9,6 +9,8 @@
     <script src="scripts/projecto.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="scripts/login.js" defer></script>
+    <meta name="search-results" content=" Results">
+    <meta name="author" content="IAN OBANDO">
 </head>
 <body>
     <header>
@@ -31,7 +33,7 @@
 
     <div class="container">
         <h1>Create Your Account</h1>
-        <form action="/PROJECTO/signup-success.html" method="POST">
+        <form action="signup_success.html" method="POST">
             <label for="fullName">Full Name</label>
             <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
 
@@ -47,8 +49,14 @@
             <button type="submit">Sign Up</button>
         </form>
         <div class="redirect">
-            Already have an account? <a href="/PROJECTO/login.html">Log in here</a>
+            Already have an account? <a href="login.html">Log in here</a>
         </div>
     </div>
+
+    <footer>
+    <p>&copy; 2024 Take My Ride. All rights reserved.</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+</footer>
 </body>
+
 </html>

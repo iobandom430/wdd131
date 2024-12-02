@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             name: "Toyota Corolla",
             price: 50,
-            image: "https://via.placeholder.com/300x200",
+            image: "https://proverenevozy.toyota.cz/media/thumbnails/0e/0eeadba7a7958c21f9865c12764ee397__4938163.jpg",
             description: "Compacto, económico y eficiente"
         },
         {
@@ -37,6 +37,19 @@ document.addEventListener("DOMContentLoaded", function () {
             price: 70,
             image: "https://via.placeholder.com/300x200",
             description: "SUV espaciosa y cómoda"
+        },
+        {
+            name: "Tesla Model 3",
+            price: 100,
+            image: "https://via.placeholder.com/300x200",
+            description: "Eléctrico, rápido y moderno"
+        },
+        
+        {
+            name: "Tesla Model 3",
+            price: 100,
+            image: "https://via.placeholder.com/300x200",
+            description: "Eléctrico, rápido y moderno"
         },
         {
             name: "Tesla Model 3",

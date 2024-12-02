@@ -44,3 +44,25 @@ document.getElementById("search-button").addEventListener("click", (event) => {
   window.location.href = `search-results.html?airport=${encodeURIComponent(airport)}&pickup-date=${pickupDate.toISOString().split('T')[0]}&dropoff-date=${dropoffDate.toISOString().split('T')[0]}`;
 });
 
+const phrases = [
+  "Find The Perfect Car",
+  "The Aventure Just Started",
+  "Ride & Drive, Like Local",
+];
+
+// Elemento donde aparecerá el texto
+const textElement = document.getElementById('changing-text');
+
+let index = 0;
+
+// Función para cambiar el texto
+function changeText() {
+  textElement.textContent = phrases[index]; // Actualiza el texto
+  index = (index + 1) % phrases.length; // Mueve al siguiente texto (vuelve al inicio al final)
+}
+
+// Inicia el cambio de texto cada 3 segundos
+setInterval(changeText, 6000);
+
+// Mostrar el primer texto inmediatamente al cargar
+changeText();

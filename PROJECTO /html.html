@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Cambiante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #changing-text {
+            font-size: 2rem;
+            color: #0056b3;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Texto que cambia cada 3 segundos</h1>
+    <p id="changing-text"></p>
+
+    <script>
+        // Lista de frases que cambiarán
+        const phrases = [
+            "Bienvenido a nuestra página.",
+            "Ofrecemos los mejores servicios.",
+            "¡Aprovecha nuestras ofertas especiales!",
+            "Gracias por visitarnos.",
+            "¿Listo para comenzar?"
+        ];
+
+        // Elemento donde aparecerá el texto
+        const textElement = document.getElementById('changing-text');
+
+        let index = 0;
+
+        // Función para cambiar el texto
+        function changeText() {
+            textElement.textContent = phrases[index]; // Actualiza el texto
+            index = (index + 1) % phrases.length; // Mueve al siguiente texto (vuelve al inicio al final)
+        }
+
+        // Inicia el cambio de texto cada 3 segundos
+        setInterval(changeText, 3000);
+
+        // Mostrar el primer texto inmediatamente al cargar
+        changeText();
+    </script>
+</body>
+</html>
