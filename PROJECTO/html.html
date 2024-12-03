@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texto Cambiante</title>
+    <title>RideMe-Rental</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
-        #changing-text {
-            font-size: 2rem;
-            color: #0056b3;
-            font-weight: bold;
+
+        /* Estilo para el video */
+        #background-video {
+            position: fixed; /* Fija el video en el fondo */
+            top: 0;
+            left: 0;
+            width: 100%; /* Hace que el video ocupe todo el ancho de la pantalla */
+            height: 100%; /* Hace que el video ocupe todo el alto de la pantalla */
+            object-fit: cover; /* Asegura que el video cubra toda el área sin deformarse */
+            z-index: -1; /* Coloca el video en el fondo */
+        }
+
+        /* Contenedor principal del texto */
+        .contenido {
+            position: absolute; /* Asegura que el contenido esté encima del video */
+            top: 0;
+            left: 0;
+            width: 100%; /* Hace que el contenido ocupe todo el ancho de la pantalla */
+            height: 100%; /* Hace que el contenido ocupe todo el alto de la pantalla */
+            display: flex;
+            justify-content: center; /* Centra el contenido horizontalmente */
+            align-items: center; /* Centra el contenido verticalmente */
+            z-index: 1; /* Asegura que el contenido esté sobre el video */
+        }
+
+        /* SVG texto (RideMe!) */
+        header svg text {
+            font-family: 'Permanent Marker', cursive; /* Fuente personalizada */
+            fill: #fff; /* Color blanco para el texto */
+            font-size: 64px; /* Tamaño de la letra */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la visibilidad */
+        }
+
+        /* Eliminar subrayado en enlaces */
+        header svg a {
+            text-decoration: none; /* Sin subrayado */
         }
     </style>
 </head>
+
 <body>
-    <h1>Texto que cambia cada 3 segundos</h1>
-    <p id="changing-text"></p>
+    <video autoplay muted loop id="background-video">
+        <source src="video/video.mp4" type="video/mp4">
+        Tu navegador no soporta el formato de video.
+    </video>
 
-    <script>
-        // Lista de frases que cambiarán
-        const phrases = [
-            "Bienvenido a nuestra página.",
-            "Ofrecemos los mejores servicios.",
-            "¡Aprovecha nuestras ofertas especiales!",
-            "Gracias por visitarnos.",
-            "¿Listo para comenzar?"
-        ];
-
-        // Elemento donde aparecerá el texto
-        const textElement = document.getElementById('changing-text');
-
-        let index = 0;
-
-        // Función para cambiar el texto
-        function changeText() {
-            textElement.textContent = phrases[index]; // Actualiza el texto
-            index = (index + 1) % phrases.length; // Mueve al siguiente texto (vuelve al inicio al final)
-        }
-
-        // Inicia el cambio de texto cada 3 segundos
-        setInterval(changeText, 3000);
-
-        // Mostrar el primer texto inmediatamente al cargar
-        changeText();
-    </script>
+    <div class="contenido">
+        <header>
+            <svg xmlns="http://www.w3.org/2000/svg" width="500" height="100" viewBox="0 0 500 100" fill="none" role="img" version="1.1">
+                <a href="projecto.html" target="_self">
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
+                        RideMe!
+                    </text>
+                </a>
+            </svg>
+        </header>
+    </div>
 </body>
+
 </html>
