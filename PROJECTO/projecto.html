@@ -8,21 +8,19 @@
     <link rel="stylesheet" href="styles/projecto.css">
     <script src="scripts/projecto.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <meta name="firstpage" content="firstpage">
+    <meta name="search-results" content="Results">
     <meta name="author" content="IAN OBANDO">
-    
 </head>
 
 <body>
     <header>
-        <svg xmlns="http://www.w3.org/2000/svg" width="350" height="50" viewBox="0 0 250 50" fill="none" role="img" version="1.1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="350" height="50" viewBox="0 0 250 50" fill="none" role="img">
             <a href="projecto.html" target="_self">
                 <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="44" fill="#000000">
                     RideMe!
                 </text>
             </a>
         </svg>
-      
         <nav>
             <ul>
                 <li><a href="projectoabout.html">Explore Cars</a></li>
@@ -36,17 +34,11 @@
         <section id="hero">
             <div class="titulo1">
                 <h2><p id="changing-text"></p></h2>
-               
                 <form id="search-form" action="search-results.html" method="get">
-                    <!-- Airport Input -->
                     <input list="airports" id="airportSearch" name="airport" placeholder="Enter Airport" required>
                     <datalist id="airports"></datalist>
-    
-                    <!-- Date Inputs -->
                     <input type="date" id="pickup-date" name="pickup-date" required>
                     <input type="date" id="dropoff-date" name="dropoff-date" required>
-    
-                    <!-- Search Button -->
                     <button type="submit" id="search-button">Find Cars</button>
                 </form>
             </div>
