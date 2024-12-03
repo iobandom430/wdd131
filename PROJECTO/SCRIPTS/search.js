@@ -35,28 +35,17 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             name: "Ford Explorer",
             price: 70,
-            image: "https://via.placeholder.com/300x200",
+            image: "https://di-uploads-pod45.dealerinspire.com/robsightford/uploads/2024/06/ford-explorer-exterior.png",
             description: "SUV espaciosa y cómoda"
         },
         {
             name: "Tesla Model 3",
             price: 100,
-            image: "https://via.placeholder.com/300x200",
+            image: "https://media.drivingelectric.com/image/private/s--Fn61QQ6r--/f_auto,t_primary-image-desktop@1/v1698686429/drivingelectric/2023-10/Tesla%20Model%203%20facelift%201_awovfc.jpg",
             description: "Eléctrico, rápido y moderno"
         },
+    
         
-        {
-            name: "Tesla Model 3",
-            price: 100,
-            image: "https://via.placeholder.com/300x200",
-            description: "Eléctrico, rápido y moderno"
-        },
-        {
-            name: "Tesla Model 3",
-            price: 100,
-            image: "https://via.placeholder.com/300x200",
-            description: "Eléctrico, rápido y moderno"
-        }
     ];
 
     // Verificar si el usuario está logueado
